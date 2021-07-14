@@ -1,0 +1,51 @@
+--Open Source since it's so easy to make
+-- May add more featuers in future
+
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/EuHellscytheLua/Aimblox/main/Ui')))();
+
+
+local Gamer = library:CreateSection("Tasks");
+
+
+Gamer:Label ("Scripts")
+
+Gamer:Button("Ball Expander", function()
+    game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Loaded", Text = ""})
+    
+
+-- Hitbox Expander
+_G.NapeSize = 10
+
+while true do
+    wait()
+
+for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Part" and v:IsA("Part") and v.Shape == Enum.PartType.Ball then
+        
+
+ 
+v.Size = Vector3.new(_G.NapeSize,_G.NapeSize,_G.NapeSize)
+end
+end
+end
+end)
+
+--end 
+Gamer:Label("Size Settings")
+
+
+Gamer:Label("Default ball Size Already Set at 10")
+Gamer:Slider("Ball Size",{min = 0, max = 300, precise = false}, function(slidervalue)
+     _G.NapeSize = (slidervalue)
+end)
+
+
+local Gamer2 = library:CreateSection("Misc");
+Gamer2:Button("Infinite Yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+library:Ready();
+
+--end
