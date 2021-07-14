@@ -224,7 +224,7 @@ local function initLibrary()
                         TextColor3 = Color3.fromRGB(255, 255, 255);
                         Text = "Eu's Aimblox UI";
                         Font = "GothamSemibold";
-                        TextSize = 12;
+                        TextSize = 11;
                         library:Create("UIGradient", {
                             Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(39, 133, 255)), ColorSequenceKeypoint.new(1, Color3.fromRGB(210, 74, 255))}
                         });
